@@ -1,6 +1,6 @@
 # WillCoin
 
-WillCoin (WIL) is a relatively useless coin that was created for the sole purpose of shits and giggles. WillCoin only exists within the boundaries of a local development ethereum network with no plans or reason to ever make it live.
+WillCoin (WIL) is a relatively useless coin that was created for the sole purpose of shits and giggles. WillCoin only exists within the boundaries of a local ethereum development network with no plans or reason to ever make it live.
 
 ### What does it do?
 You can send. You can recieve. You can check your balance.
