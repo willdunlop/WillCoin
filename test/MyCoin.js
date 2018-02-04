@@ -2,7 +2,7 @@ var MyCoin = artifacts.require("./MyCoin.sol");
 
 contract("MyCoin",function(accounts){
 
-    var john_addr = accounts[0];
+    var will_addr = accounts[0];
     var sam_addr  = accounts[1];
     var kane_addr = accounts[2];
 
@@ -15,16 +15,16 @@ contract("MyCoin",function(accounts){
         }).then(function(result){
             printDetails(result);
             // Transfer funds to another account
-            my_coin.transfer(sam_addr,130,{from:john_addr});
+            my_coin.transfer(sam_addr,130,{from:will_addr});
             return my_coin.checkBalance.call({from: sam_addr});
         }).then(function (result) {
             console.log(" Sam's balance  : " + result );
             assert.equal(130,result,"Sam's balance should be 130");
-            my_coin.burn(100,{from:john_addr});
-            return my_coin.checkBalance.call({from:john_addr});
+            my_coin.burn(100,{from:will_addr});
+            return my_coin.checkBalance.call({from:will_addr});
         }).then(function (result) {
             console.log(" Will's balance : " + result);
-            assert.equal(99770,result,"John's balance should be 99770");
+            assert.equal(99770,result,"Will's balance should be 99770");
             return my_coin.checkBalance.call({from: sam_addr});
         }).then(function (result) {
             console.log(" Sam's balance  : " + result );
